@@ -1,0 +1,9 @@
+<div class="main-section">
+    <mat-dialog-content class="mat-typography">
+        <h3>Do you really want to clear ?</h3>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirm</button>
+    </mat-dialog-actions>
+</div>

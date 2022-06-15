@@ -14,11 +14,15 @@ import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
 import { BonusPointModule } from './bonus-point/bonus-point.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './share/material.module';
+import { ConfirmTemplateDialog } from './dialog/confirm-template/confirm-template.dialog';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    MaterialModule,
     AppRoutingModule,
     HttpClientModule,
 
@@ -28,12 +32,14 @@ import { BonusPointModule } from './bonus-point/bonus-point.module';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    BonusPointModule
+    BonusPointModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    ConfirmTemplateDialog
   ],
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]

@@ -1,0 +1,8 @@
+.main-section {
+  width: 500px;
+  border-radius: 9px;
+}
+
+.mat-dialog-actions {
+  border-top: 1px solid black;
+}
