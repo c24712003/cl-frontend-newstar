@@ -25,9 +25,14 @@ export class HeroesComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
+    let hero = new Hero();
+    hero.id = this.heroes.length + 1;
+    hero.name = name;
+
+    this.heroService.addHero(hero)
       .subscribe(hero => {
         this.heroes.push(hero);
+        this.heroService.heroes$.next(this.heroes);
       });
   }
 
@@ -36,5 +41,4 @@ export class HeroesComponent implements OnInit {
     this.heroService.deleteHero(hero).subscribe();
     this.heroService.heroes$.next(this.heroes);
   }
-
 }
