@@ -22,7 +22,7 @@ a:link {
   color: #607d8b;
 }
 nav a:hover {
-  color: #039be5;
+  color: #e85374;
   background-color: #cfd8dc;
 }
 nav a.active {
@@ -37,7 +37,7 @@ nav a.active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 16%;
+  width: 20.5%;
 }
 
 .mat-stroked-button {
