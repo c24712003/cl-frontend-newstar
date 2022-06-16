@@ -1,4 +1,4 @@
-<h2>My Heroes</h2>
+<h2>My {{heroes.length}} Heroes</h2>
 
 <div>
   <label>Hero name:
@@ -15,7 +15,6 @@
     <a routerLink="/detail/{{hero.id}}">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </a>
-    <button class="delete" title="delete hero"
-    (click)="delete(hero)">x</button>
+    <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
   </li>
 </ul>

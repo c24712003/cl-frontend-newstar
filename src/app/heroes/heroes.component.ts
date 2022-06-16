@@ -18,8 +18,8 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes);
+    this.heroService.getHeroes().subscribe();
+    this.heroService.heroes$.subscribe(next => this.heroes = next);
   }
 
   add(name: string): void {
@@ -34,6 +34,7 @@ export class HeroesComponent implements OnInit {
   delete(hero: Hero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero).subscribe();
+    this.heroService.heroes$.next(this.heroes);
   }
 
 }
