@@ -1,8 +1,17 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/cl-dashboard">Dashboard</a>
-  <a routerLink="/cl-heroes">Heroes</a>
-  <a routerLink="/bonusPoint">bonusPoint</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<div class="app">
+  <div class="app-header">
+    <div>
+      <h1>{{title}}</h1>
+    </div>
+    <div>
+      <button mat-stroked-button (click)="clearTopFourMsg()">Clear top 4 messages</button>
+    </div>
+  </div>
+  <nav>
+    <a routerLink="/cl-dashboard">Dashboard</a>
+    <a routerLink="/cl-heroes">Heroes</a>
+    <a routerLink="/bonusPoint">bonusPoint</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+</div>
