@@ -14,4 +14,4 @@ import { HeroesComponent } from './heroes.component';
         HeroesRoutingModule
     ]
 })
-export class DashboardModule { }
+export class HeroesdModule { }

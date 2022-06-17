@@ -36,8 +36,10 @@ nav a.active {
 .app-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 20.5%;
+}
+
+.app-header button {
+  margin-left: 6%;
 }
 
 .mat-stroked-button {

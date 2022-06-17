@@ -9,7 +9,7 @@
   </div>
   <nav>
     <a routerLink="/cl-dashboard">Dashboard</a>
-    <a routerLink="/cl-heroes">{{heroes.length}} Heroes</a>
+    <a routerLink="/cl-heroes">{{heroes.length !== 0 ? heroes.length : ''}} Heroes</a>
     <a routerLink="/bonusPoint">bonusPoint</a>
   </nav>
   <router-outlet></router-outlet>
