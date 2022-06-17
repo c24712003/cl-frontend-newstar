@@ -29,9 +29,15 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
+.col {
+  margin-right: 1%;
+}
+.col:last-of-type {
+  margin-right: 0;
+}
 .module {
   padding: 20px;
   text-align: center;
@@ -72,11 +78,13 @@ h4 {
 @media (min-width: 768px) {
   .col {
     min-width: 49.5%;
+    margin-right: 0.5%;
   }
 }
 
 @media (min-width: 992px) {
   .col {
-    min-width: 24%;
+    min-width: 24.2%;
+    margin-right: 1%;
   }
 }

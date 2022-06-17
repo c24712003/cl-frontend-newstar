@@ -1,7 +1,7 @@
 import { ConfirmTemplateDialog } from './../dialog/confirm-template/confirm-template.dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../message.service';
+import { MessageService } from '../services/index';
 
 @Component({
   selector: 'app-messages',

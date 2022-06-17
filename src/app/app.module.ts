@@ -4,14 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './services/in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroService } from './hero.service';
-import { MessageService } from './message.service';
+import { DashboardLinkService, HeroService, MessageService } from './services/index';
 import { MessagesComponent } from './messages/messages.component';
 import { BonusPointModule } from './bonus-point/bonus-point.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -41,7 +40,7 @@ import { ConfirmTemplateDialog } from './dialog/confirm-template/confirm-templat
     MessagesComponent,
     ConfirmTemplateDialog
   ],
-  providers: [HeroService, MessageService],
+  providers: [HeroService, DashboardLinkService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ignoreElements } from 'rxjs/operators';
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Hero } from '../models/hero';
+import { HeroService } from '../services/index';
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
-export class HeroesComponent implements OnInit {
+export class HeroesComponent implements OnInit, OnDestroy {
   heroes: Hero[];
+  subscription?: Subscription;
 
   constructor(private heroService: HeroService) { }
 
@@ -17,16 +20,21 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
+  ngOnDestroy(): void {
+    this.subscription!.unsubscribe();
+  }
+
   getHeroes(): void {
     this.heroService.getHeroes().subscribe();
-    this.heroService.heroes$.subscribe(next => this.heroes = next);
+    this.subscription = this.heroService.heroes$.subscribe(next => this.heroes = next);
   }
 
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
     let hero = new Hero();
-    hero.id = this.heroes.length + 1;
+    let length = this.heroes.length;
+    hero.id = length !== 0 ? this.heroes[this.heroes.length - 1].id + 1 : length + 1;
     hero.name = name;
 
     this.heroService.addHero(hero)
