@@ -31,10 +31,7 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
 }
-.col {
-  /* flex: 1; */
-  min-width: 24%;
-}
+
 .module {
   padding: 20px;
   text-align: center;
@@ -75,5 +72,11 @@ h4 {
 @media (min-width: 768px) {
   .col {
     min-width: 49.5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col {
+    min-width: 24%;
   }
 }
