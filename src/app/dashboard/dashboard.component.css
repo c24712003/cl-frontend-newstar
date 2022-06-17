@@ -22,6 +22,7 @@ h3 {
 }
 h4 {
   position: relative;
+  margin: auto;
 }
 .grid {
   margin: 0;
@@ -51,15 +52,14 @@ h4 {
 .grid-pad {
   padding: 10px 0;
 }
-.grid-pad > [class*="col-"]:last-of-type {
-}
 @media (max-width: 600px) {
   .module {
     font-size: 10px;
     max-height: 75px;
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 767px) {
   .grid {
     margin: 0;
     flex-wrap: wrap;
@@ -69,5 +69,11 @@ h4 {
   }
   .module {
     min-width: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .col {
+    min-width: 49.5%;
   }
 }
