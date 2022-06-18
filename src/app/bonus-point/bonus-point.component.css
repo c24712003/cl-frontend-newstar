@@ -14,3 +14,81 @@
 img {
   max-width: 100%;
 }
+
+.cube-main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+}
+
+.cube-sub {
+  width: 196px;
+  height: 196px;
+  border: 2px solid;
+  margin: 0 0 -2px -2px;
+  display: flex;
+  justify-content: center;
+}
+
+.cube-sub p {
+  font-size: 80px;
+  align-self: center;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: 33.3% 33.3% 33.3%;
+  width: 920px;
+  height: 300px;
+}
+
+.wrap-border {
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  margin: 0 0 -1px -1px;
+}
+
+.wrap-border p {
+  font-size: 30px;
+  margin: revert;
+  align-self: center;
+}
+
+.g1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.g2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.g3 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.g4 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.g5 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+
+.g6 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.g7 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+}

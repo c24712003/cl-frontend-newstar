@@ -16,7 +16,7 @@ export class AppComponent implements OnInit, OnDestroy {
   heroes: Hero[] = [];
   hero_sub: Subscription;
   dashboard_sub: Subscription;
-  dashboard_link: DashboardLink;
+  dashboard_link: DashboardLink = new DashboardLink();
 
   constructor(public messageService: MessageService, private heroService: HeroService, private dashboardService: DashboardLinkService, public dialog: MatDialog) { }
 

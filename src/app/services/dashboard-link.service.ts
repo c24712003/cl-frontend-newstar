@@ -18,7 +18,7 @@ export class DashboardLinkService {
     getDashboard() {
         return this.http.get<DashboardLink>(this.apiUrl)
             .pipe(
-                tap(dashboard_link => console.log("getDashboard")),
+                tap(dashboard_link => console.log("")),
                 catchError(this.handleError('getDashboard', {}))
             )
     }
